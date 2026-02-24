@@ -20,3 +20,9 @@
     --color-graybg: #eae8e8;
     --color-graycard: #dedcdc;
 }
+
+@layer components {
+    .padingX {
+        @apply px-3 xl:px-10;
+    }
+}

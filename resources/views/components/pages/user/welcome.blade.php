@@ -12,8 +12,8 @@ new class extends Component
 ?>
 
 <div class="h-screen bg-neutral-400 relative">
-    <h1 class="text-2xl font-bold relative">Welcome</h1>
-    <p class="mt-2 text-gray-600">This is your dashboard where you can manage your account and view your activities.</p>
+    @include('components.partials.user.navbar')
 
-    <img class="absolute bottom-0 left-0 w-full" src="{{ asset('svg/divider-kiri.svg') }}" alt="">
+
+    {{-- <img class="absolute bottom-0 left-0 w-full" src="{{ asset('svg/divider-kiri.svg') }}" alt=""> --}}
 </div>
