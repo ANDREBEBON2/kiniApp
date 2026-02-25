@@ -2,8 +2,7 @@
 
 use Livewire\Component;
 
-new class extends Component
-{
+new class extends Component {
     //
 };
 ?>
@@ -35,17 +34,21 @@ new class extends Component
                         x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95"
                         class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-50"
                         style="display: none;">
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100">Budget Tips</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100">Budget
+                            Tips</a>
                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100">Travel With
                             Agent</a>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100">Bagpacker</a>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100">Group Trip</a>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100">Solo Trip</a>
+                        <a href="#"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100">Bagpacker</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100">Group
+                            Trip</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100">Solo
+                            Trip</a>
                     </div>
                 </li>
 
                 {{-- Accommodation Tips --}}
-                <li class="relative" x-data="{open:false}">
+                <li class="relative" x-data="{ open: false }">
                     <button @click="open = !open" @click.away="open = false"
                         class="text-white py-1 px-1 text-lg font-semibold hover:text-accent transition-colors duration-150 group">
                         <span>Accommodation Tips</span>
@@ -68,7 +71,7 @@ new class extends Component
 
 
                 {{-- Transportation Tips --}}
-                {{-- <li class="relative" x-data="{open:false}">
+                {{-- <li class="relative" x-data="{ open: false }">
                     <button @click="open = !open" @click.away="open = false"
                         class="text-white py-1 px-1 text-lg font-semibold hover:text-accent transition-colors duration-150 group">
                         <span>Transportation Tips</span>
@@ -85,13 +88,15 @@ new class extends Component
                         style="display: none;">
                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100">Destinasi
                             Populer</a>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100">Tips Hemat</a>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100">Panduan Visa</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100">Tips
+                            Hemat</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100">Panduan
+                            Visa</a>
                     </div>
                 </li> --}}
 
                 {{-- More Tips --}}
-                <li class="relative" x-data="{open:false}">
+                <li class="relative" x-data="{ open: false }">
                     <button @click="open = !open" @click.away="open = false"
                         class="text-white py-1 px-1 text-lg font-semibold hover:text-accent transition-colors duration-150 group">
                         <span>More Tips</span>
@@ -106,11 +111,14 @@ new class extends Component
                         x-transition:leave="transition ease-in duration-75"
                         x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95"
                         style="display: none;">
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100">Flight Tips</a>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100">Visa Tips</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100">Flight
+                            Tips</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100">Visa
+                            Tips</a>
                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100">Restaurant
                             Tips</a>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100">Transportation
+                        <a href="#"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100">Transportation
                             Tips</a>
                     </div>
                 </li>

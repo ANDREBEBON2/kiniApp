@@ -2,8 +2,7 @@
 
 use Livewire\Component;
 
-new class extends Component
-{
+new class extends Component {
     public function render()
     {
         return view('components.pages.user.welcome')->layout('components.layouts.user-layout');
@@ -34,7 +33,8 @@ new class extends Component
                     x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
                     x-transition:leave="transition opacity duration-1000" x-transition:leave-start="opacity-100"
                     x-transition:leave-end="opacity-0" {{-- Hapus bg-fixed agar gambar tidak 'melayang' secara aneh saat
-                    di-scroll --}} class="absolute inset-0 bg-neutral-900/50 bg-blend-multiply bg-cover bg-center"
+                    di-scroll --}}
+                    class="absolute inset-0 bg-neutral-900/70 bg-blend-multiply bg-cover bg-center"
                     :style="'background-image: url(' + img + ');'">
                 </div>
             </template>
@@ -47,12 +47,13 @@ new class extends Component
             @include('components.partials.user.navbar')
 
             {{-- welcome --}}
-            <section class="container mx-auto padingX h-dvh text-5xl flex pt-36">
-                <div class="space-y-7">
-                    <h1 class="text-white text-8xl font-bold">Expert Sumba <br> Travel Tips</h1>
-                    <p class="text-xl text-white">Discover comprehensive travel insights from local experts to make your
+            <section class=" h-dvh relative text-5xl flex pt-10 sm:pt-36">
+                <div class="container mx-auto padingX space-y-7">
+                    <h1 class="text-white text-6xl font-bold">Expert Sumba <br> Travel Tips</h1>
+                    <p class="text-xl text-white">Discover comprehensive travel insights from local experts
+                        to make your
                         Sumba
-                        Island <br>journey
+                        Island <br class="hidden sm:block">journey
                         unforgettable and hassle-free.</p>
                     <button
                         class="h-14 px-10 rounded-lg flex items-center justify-center border-3 text-xl font-bold border-white text-white">
@@ -69,6 +70,21 @@ new class extends Component
                     </div>
                 </div>
 
+                {{-- dividers --}}
+                <div>
+                    <x-svg.divider class="text-light w-full absolute bottom-0 left-0" />
+                </div>
+            </section>
+
+
+            {{-- Discover --}}
+            <section class="bg-light">
+                <div class="container mx-auto padingX">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio doloribus ratione voluptatum adipisci
+                    corporis temporibus inventore unde repellat sint perferendis provident, aliquid voluptate soluta
+                    esse officia nobis qui deleniti quo?
+                </div>
             </section>
         </div>
     </div>
+</div>
