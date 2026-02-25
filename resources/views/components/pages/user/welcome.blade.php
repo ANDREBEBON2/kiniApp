@@ -11,9 +11,64 @@ new class extends Component
 };
 ?>
 
-<div class="h-screen bg-neutral-400 relative">
-    @include('components.partials.user.navbar')
+<div class="h-screen relative">
+    <div x-data="{
+        images: [
+            '{{ asset('images/long-road.jpg') }}',
+            '{{ asset('images/Ratenggaro-1.jpg') }}',
+            '{{ asset('images/Ratenggaro-2.jpg') }}',
+            '{{ asset('images/kubur-batu.jpg') }}',
+            '{{ asset('images/weekuri.jpg') }}',
+        ],
+        activeImage: 0,
+        init() {
+            setInterval(() => {
+                this.activeImage = (this.activeImage + 1) % this.images.length
+            }, 5000)
+        }
+    }" class="relative w-full min-h-screen">
+        {{-- 1. BACKGROUND SLIDESHOW (ABSOLUTE agar ikut ke-scroll) --}}
+        <div class="absolute inset-0 z-0">
+            <template x-for="(img, index) in images" :key="index">
+                <div x-show="activeImage === index" x-transition:enter="transition opacity duration-1000"
+                    x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+                    x-transition:leave="transition opacity duration-1000" x-transition:leave-start="opacity-100"
+                    x-transition:leave-end="opacity-0" {{-- Hapus bg-fixed agar gambar tidak 'melayang' secara aneh saat
+                    di-scroll --}} class="absolute inset-0 bg-neutral-900/50 bg-blend-multiply bg-cover bg-center"
+                    :style="'background-image: url(' + img + ');'">
+                </div>
+            </template>
+        </div>
 
 
-    {{-- <img class="absolute bottom-0 left-0 w-full" src="{{ asset('svg/divider-kiri.svg') }}" alt=""> --}}
-</div>
+
+        {{-- 2. CONTENT (RELATIVE agar berada di atas background) --}}
+        <div class="relative z-10 ">
+            @include('components.partials.user.navbar')
+
+            {{-- welcome --}}
+            <section class="container mx-auto padingX h-dvh text-5xl flex pt-36">
+                <div class="space-y-7">
+                    <h1 class="text-white text-8xl font-bold">Expert Sumba <br> Travel Tips</h1>
+                    <p class="text-xl text-white">Discover comprehensive travel insights from local experts to make your
+                        Sumba
+                        Island <br>journey
+                        unforgettable and hassle-free.</p>
+                    <button
+                        class="h-14 px-10 rounded-lg flex items-center justify-center border-3 text-xl font-bold border-white text-white">
+                        Explore Sumba Now
+                    </button>
+                    {{-- 2. INDIKATOR TITIK (PAGINATION) --}}
+                    <div class="z-20 flex space-x-2">
+                        <template x-for="(img, index) in images" :key="index">
+                            <button @click="activeImage = index"
+                                :class="activeImage === index ? 'bg-white h-3 w-8' : 'bg-white/40 h-3 w-3'"
+                                class="rounded-full transition-all duration-700 border border-white/50 shadow-sm">
+                            </button>
+                        </template>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </div>

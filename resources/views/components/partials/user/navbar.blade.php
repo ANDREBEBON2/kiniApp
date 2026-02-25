@@ -13,8 +13,9 @@ new class extends Component
         <div class="">
             <img class="xl:size-36 md:size-32 size-28" src="{{ asset('images/Logo.png') }}" alt="Logo">
         </div>
+
         <div class="w-full items-center justify-end xl:flex hidden">
-            <ul class="flex items-center gap-20">
+            <ul class="flex items-center gap-14">
                 <li><a href="#"
                         class="text-white text-lg font-semibold hover:text-accent transition-colors duration-150">Home</a>
                 </li>
@@ -67,7 +68,7 @@ new class extends Component
 
 
                 {{-- Transportation Tips --}}
-                <li class="relative" x-data="{open:false}">
+                {{-- <li class="relative" x-data="{open:false}">
                     <button @click="open = !open" @click.away="open = false"
                         class="text-white py-1 px-1 text-lg font-semibold hover:text-accent transition-colors duration-150 group">
                         <span>Transportation Tips</span>
@@ -87,7 +88,7 @@ new class extends Component
                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100">Tips Hemat</a>
                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100">Panduan Visa</a>
                     </div>
-                </li>
+                </li> --}}
 
                 {{-- More Tips --}}
                 <li class="relative" x-data="{open:false}">
@@ -105,10 +106,12 @@ new class extends Component
                         x-transition:leave="transition ease-in duration-75"
                         x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95"
                         style="display: none;">
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100">Destinasi
-                            Populer</a>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100">Tips Hemat</a>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100">Panduan Visa</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100">Flight Tips</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100">Visa Tips</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100">Restaurant
+                            Tips</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-100">Transportation
+                            Tips</a>
                     </div>
                 </li>
             </ul>
