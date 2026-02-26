@@ -33,8 +33,7 @@ new class extends Component {
                     x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
                     x-transition:leave="transition opacity duration-1000" x-transition:leave-start="opacity-100"
                     x-transition:leave-end="opacity-0" {{-- Hapus bg-fixed agar gambar tidak 'melayang' secara aneh saat
-                    di-scroll --}}
-                    class="absolute inset-0 bg-neutral-900/70 bg-blend-multiply bg-cover bg-center"
+                    di-scroll --}} class="absolute inset-0 bg-neutral-900/70 bg-blend-multiply bg-cover bg-center"
                     :style="'background-image: url(' + img + ');'">
                 </div>
             </template>
@@ -72,14 +71,14 @@ new class extends Component {
 
                 {{-- dividers --}}
                 <div>
-                    <x-svg.divider class="text-light w-full absolute bottom-0 left-0" />
+                    <x-svg.divider class="text-light w-full absolute -bottom-1 left-0 rotate-y-180" />
                 </div>
             </section>
 
 
             {{-- Discover --}}
-            <section class="bg-light">
-                <div class="container mx-auto padingX">
+            <section class="bg-light relative">
+                <div class="container mx-auto padingX pb-20 pt-10 space-y-5">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio doloribus ratione voluptatum adipisci
                     corporis temporibus inventore unde repellat sint perferendis provident, aliquid voluptate soluta
                     esse officia nobis qui deleniti quo?
